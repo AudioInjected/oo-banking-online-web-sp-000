@@ -8,7 +8,7 @@ class Transfer
     @status = "pending"
   end
 
-  def valid?(sender, receiver)
-    sender.status == "open" && receiver.status == "open" ? true : false
+  def valid?
+    self.sender.status == "open" && self.receiver.status == "open" ? true : false
   end
 end
